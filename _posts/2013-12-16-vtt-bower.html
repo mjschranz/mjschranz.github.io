@@ -1,0 +1,67 @@
+---
+layout: post
+date: 2013-12-16 TODO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+title: Install vtt.js with Bower
+tags:
+- mozilla
+- seneca college
+- open-source
+- cdot
+---
+
+<p>
+  Built distributions of <a href="https://github.com/andreasgal/vtt.js">vtt.js</a>
+  are now available on <a href="https://github.com/bower/bower">Bower</a>.
+  To install it you can either do: 
+</p>
+
+<pre class="prettyprint">
+  bower install vtt.js
+</pre>
+
+<p>
+  Or you can list it as a dependency in your <code>bower.json</code> file like so:
+</p>
+
+<pre class="prettyprint">
+  {
+    "dependencies": {
+      "vtt.js": "~0.3.0"
+    }
+  }
+</pre>
+
+<p>
+  If you don't want to use Bower and would rather build your own <code>vtt.js</code>
+  you can clone the <a href="https://github.com/andreasgal/vtt.js">repo</a> and do:
+</p>
+
+<pre class="prettyprint">
+  git submodule update --init --recursive && grunt build
+</pre>
+
+<p>
+  For more info you can check out the <code>vtt.js</code> <a href="https://github.com/andreasgal/vtt.js#browser">README</a>.
+</p>
+
+<h3>Hosting Prebuilt vtt.js Distributions</h3>
+
+<p>
+  I encountered a problem getting <code>vtt.js</code> onto Bower; which was that Bower
+  needs a git endpoint for your package that has the <em>final</em> version of your package in it.
+  For JavaScript projects you would usually just point it at your GitHub
+  repo and be done. However, we have a build step to get a version of <code>vtt.js</code>
+  that is runnable in all browsers. This version contains polyfills for a lot of things
+  that an old browser might not have, like <a href="http://dev.w3.org/html5/webvtt/#vttcue-interface">VTTCue</a>,
+  <a href="http://dev.w3.org/html5/webvtt/#vttregion-interface">VTTRegion</a> and
+  <a href="http://encoding.spec.whatwg.org/#api">TextDecoder</a>. Therefore, we can't just put
+  the GitHub repo as an endpoint because then when you install the package you would still need to do another
+  build step, which isn't ideal. What I've done instead is created a
+  <a href="https://github.com/RickEyre/vtt.js-dist">vttj.s distribution repo</a> which
+  we can point Bower at and get a working copy of <code>vtt.js</code> right off the bat.
+</p>
+
+<p>
+  This isn't the most ideal solution and there are probably better ones out there
+  so if you know of one give me a shout!
+</p>

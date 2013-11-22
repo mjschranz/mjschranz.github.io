@@ -1,0 +1,30 @@
+---
+layout: nil
+---
+<?xml version="1.0"?>
+<!DOCTYPE data [
+  <!ENTITY mdash "mdash;">
+]>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rickeyre.ca | Mozilla posts</title>
+    <link>http://rickeyre.ca/</link>
+    <atom:link href="http://rickeyre.ca/mozilla-feed.xml" rel="self" type="application/rss+xml" />
+    <description>Posts on things to do with Mozilla rickeyre.ca</description>
+    <language>en-us</language>
+    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+
+    {% for post in site.tags.mozilla %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>http://rickeyre.ca{{ post.url }}</link>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+      <author>Rick Eyre - rick.eyre@hotmail.com</author>
+      <guid>http://rickeyre.ca{{ post.id }}</guid>
+      <description>{{ post.content | xml_escape }}</description>
+    </item>
+    {% endfor %}
+
+  </channel>
+</rss>

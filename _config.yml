@@ -1,0 +1,19 @@
+# Config options
+markdown: rdiscount
+permalink: date
+exclude: [README.md]
+timezone: America/Toronto
+pygments: true
+paginate: 5
+
+# Site wide variables
+title: Open Source Hacker in Training
+tagline: Still figuring it all out.
+
+# Contact Info
+github: https://github.com/mjschranz
+twitter: https://twitter.com/mjschranz
+linkedin: ca.linkedin.com/pub/matthew-schranz/13/344/6a2/
+
+# Site URL
+url: http://mattschranz.ca
