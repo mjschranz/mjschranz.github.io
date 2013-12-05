@@ -1,0 +1,84 @@
+---
+layout: post
+date: 2013-12-05
+title: Setup VMs for your IE Testing Pleasure
+tags:
+- virtualbox
+- ie
+- mac osx
+---
+
+<p>
+  Greeting's all! This will be a relatively short post but aimed with some hopefully useful content to you.
+  Thankfully I've had the privilege of being able to avoid testing/supporting IE a decent bit in my career
+  thusfar but times are a changing and I have some code reviews on me for testing fixes in IE10 with one coming up shortly
+  for IE8!
+</p>
+
+<p>
+  In the past I simply used a Windows PC next to me but I haven't reliably kept that machine up and running so I decided to
+  move to using Virtual Machine's instead as they are a really handy and powerful alternative to actually having multiple
+  machines around with different operating systems installed. I'm going to go over a few quick steps I took to being able to
+  have a VM running Windows 7 with IE10 already prebuilt for me on my Macbook. If you'd like to read a little bit on what virtual machine's
+  are in the first place, <a href="http://en.wikipedia.org/wiki/Virtual_machine" target="_blank">read here</a> to do so!
+</p>
+
+<h3>The VM Software</h3>
+
+<p>
+  There are all kind's of alternative's out there that can suite different use cases. For me I needed something easy to use, setup and that allowed me to
+  be up and running in a relatively short amount of time. I went with <a href="https://www.virtualbox.org/" target="_blank">VirtualBox</a> because it not only does
+  all of the aforementioned amicably but it's also multi platform and open source!
+</p>
+
+<h3>Obtaining and Using the Images</h3>
+
+<p>
+  Getting useful images for Windows can be a real <strong>PITA</strong> compared to say Linux but thanks for the people of
+  <a href="http://www.modern.ie/en-us/virtualization-tools#downloads" target="_blank">modern.IE</a> it's really simple to have Windows downloaded, installed and running
+  the desired version of Internet Explorer in no time. You have multiple options here to download everything but since I'm using a <strong>UNIX</strong> based system and
+  am slowly becoming a command line junky I'm going to go with what is probably the easiest and quickest solution.
+
+</p>
+
+<p>
+  First you are going to need to open your favourite terminal
+  application. I personally just stick with the <strong>Terminal</strong> app that comes installed on OSX but whatever you fancy should work just fine. Next you need to navigate
+  to wherever you plan on keeping all of your VMs on your machine ( I made a folder called VMs in my Documents ).
+</p>
+
+<p>
+  <strong>modern.IE</strong> has a really useful way of installing everything for UNIX based systems ( or anything that has access to a
+  <a href="http://en.wikipedia.org/wiki/CURL" target="_blank">cURL</a> like command ) that allows me to download everything at once. Once you have selected a desired testing OS
+  ( Mac, in my case ) and the VM platform you are using ( Virtual Box, in my case ) your page should look something like:
+</p>
+
+<img src="assets/img/posts/ie_images.png" alt="available vms"/>
+
+<p>
+  From there all you need to do is click on the desired <strong>Grab them all with cURL</strong> link and copy the command given. For example, if we selected <strong>IE10 - Win 7</strong>
+  our command would look like the following below. Once you paste that in your terminal just hit enter and all the neccesary files will be downloaded!
+</p>
+
+<pre class="prettyprint">
+  curl -O "https://az412801.vo.msecnd.net/vhd/IEKitV1_Final/VirtualBox/OSX/IE10_Win7/IE10.Win7.For.MacVirtualBox.part{1.sfx,2.rar,3.rar,4.rar}"
+</pre>
+
+<h3>Extracting and running the Image</h3>
+
+<p>
+  After it's done downloading the necessary files we need to extract it all so we can run it in VirtualBox. First, we need to set permissions on the <code>.sfx</code> file that
+  was downloaded and afterward's it's as simple as running that executable. This is a two step process ( or one, if you like chaining commands together ), like so:
+</p>
+
+<pre class="prettyprint">
+  chmod +x ./IE10.Win7.For.MacVirtualBox.part1.sfx && ./IE10.Win7.For.MacVirtualBox.part1.sfx
+</pre>
+
+<p>
+  After that it's as simple as double clicking the generated <code>.ova</code> file ( in this case, <strong>IE10.Win7.For.Mac.VirtualBox.ova</strong> ) and it will auto open in VirtualBox.
+  From there you can always change a few settings ( increasing the available RAM is a good choice ) but that's basically all you have to do! If you want to read up a little more on this,
+  check out this helpful <a href="http://webees.me/installing-virtualbox-for-mac-and-set-up-modern-ie/" target="_blank">blog post</a> I found that really made the process easy for me to
+  do.
+</p>
+
