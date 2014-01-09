@@ -1,0 +1,24 @@
+---
+layout: post
+date: 2014-01-09
+title: Dynamic Duration and Popcorn Maker
+tags:
+- Webmaker
+- Popcorn Maker
+- Popcorn.js
+---
+
+<p>
+  Small post, but wanted to bring to the attention of anyone who reads this that actually uses Mozilla's <a href="https://popcorn.webmaker.org" target="_blank">Popcorn Maker</a>
+  that I just recently landed a long over due feature/performance fix being dubbed <strong>Dynamic Duration</strong>!
+</p>
+
+<h3>What exactly is Dynamic Duration?</h3>
+
+<p>
+  Good question! Previously whenever changes needed to be made to the base timeline's length ( a <a href="https://github.com/mozilla/popcorn-js/blob/master/wrappers/null/popcorn.HTMLNullVideoElement.js" target="_blank">Null Video</a> using <a href="https://github.com/mozilla/popcorn-js" target="_blank">Popcorn.js</a> ) we would essentially have to destroy the tracking popcorn instance and recreate it with a base media that had a sufficient duration. This was really awful for performance because any trackevents that required <a href="https://developer.mozilla.org/en/docs/AJAX" target="_blank">AJAX</a> calls of any sort would have to be redone because events were being recreated just so the project could be in it's previous state data wise. It was annoying/noticable enough for people who have good connections but was at a near "<strong>game stopper</strong>" for anyone who didn't have a great connection because it would be such a strain on network performance. On top of that there was a somewhat anoying UI quirk of seeing the timeline briefly hide itself only to almost instantly reappear.
+</p>
+
+<p>
+  As of today however, these are problems of the past! Hooray for performance increases. Please file bugs if you notice any issues!
+</p>
