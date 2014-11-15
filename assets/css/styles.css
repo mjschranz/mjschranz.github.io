@@ -1,0 +1,96 @@
+html body {
+  background-image: url("/assets/img/background/fabric-of-squares-gray.png");
+  background-repeat: repeat;
+}
+
+hr {
+  display: block;
+  height: 3px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+footer {
+  text-align:center;
+}
+
+.content {
+  margin-top: 80px;
+  margin-bottom: 170px;
+}
+
+.inline-content {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 2%;
+  padding-bottom: 3%;
+  max-width: 90%;
+}
+
+.tag-line {
+  color:#999;
+  font-size: 1.3em;
+}
+
+.small-tag-line {
+  clear: left;
+  display: block;
+  padding-top: 2%;
+  line-height:1;
+  color:#999;
+}
+
+.caption {
+  display: block;
+  color:#999;
+  font-size: small;
+}
+
+div.image-list > div {
+  float: left;
+}
+
+div.image-list > div, .image {
+  margin: 2%;
+}
+
+.icon {
+  max-width: 4.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: inline-block;
+}
+
+.post-title {
+  margin-top: 0.1%;
+  margin-bottom: 2%;
+}
+
+.prettyprint {
+  font-size: 0.8em;
+}
+
+.footer-wrapper {
+  border-top: 1px solid #DDD;
+  padding-top: 10px;
+}
+
+.footer-wrapper p {
+  margin-top: 10px;
+}
+
+.image-links img {
+  width: 25px;
+}
+
+.image-links > a:hover {
+  text-decoration: none;
+}
+
+.content img {
+  margin: 1%;
+  width: 100%;
+}

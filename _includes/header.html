@@ -1,12 +1,11 @@
 <header class="navbar navbar-default navbar-fixed-top" role="banner">
   <div class="container-fluid">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-          <a href="{{ site.url }}">
-          <h1> {{ site.title }} </h1>
-          <small class="tag-line"> {{ site.tagline }} </small>
-        </a>
-      </div>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{ site.url }}">
+        {{ site.title }}
+      </a>
+    </div>
+    <nav class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about/index.html">About</a></li>
@@ -15,3 +14,4 @@
     </nav>
   </div>
 </header>
+
