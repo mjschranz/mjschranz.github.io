@@ -1,6 +1,19 @@
 html body {
   background-image: url("/assets/img/background/fabric-of-squares-gray.png");
   background-repeat: repeat;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+}
+
+header.navbar, footer.navbar {
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+footer {
+  font-size: 12px;
 }
 
 hr {
@@ -14,11 +27,6 @@ hr {
 
 footer {
   text-align:center;
-}
-
-.content {
-  margin-top: 80px;
-  margin-bottom: 170px;
 }
 
 .inline-content {
@@ -76,6 +84,7 @@ div.image-list > div, .image {
 .footer-wrapper {
   border-top: 1px solid #DDD;
   padding-top: 10px;
+  margin-bottom: 0;
 }
 
 .footer-wrapper p {
@@ -83,7 +92,7 @@ div.image-list > div, .image {
 }
 
 .image-links img {
-  width: 25px;
+  width: 35px;
 }
 
 .image-links > a:hover {

@@ -3,11 +3,11 @@ markdown: rdiscount
 permalink: date
 exclude: [README.md]
 timezone: America/Toronto
-pygments: true
+highlighter: true
 paginate: 5
 
 # Site wide variables
-title: Open Source Hacker in Training
+title: Matthew Schranz's Blog
 tagline: Still figuring it all out.
 
 # Contact Info
