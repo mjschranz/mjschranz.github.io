@@ -5,29 +5,22 @@
     {% include includes.html %}
   </head>
   <body>
+    {% include header.html %}
     <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          {% include header.html %}
-          <div class="content">
-            <span class="tag-line">
-              {{ page.date | date_to_string }}
-            </span>
-            <h2 class="post-title">
-              {{ page.title }}
-            </h2>
-            {{ content }}
-            <small class="small-tag-line">- Tagged in {{ page.tags | array_to_sentence_string }}.</small>
-            <hr/>
-            {% include socialite.html %}
-            <hr/>
-            <!-- {% include disqus.html %} -->
-            <hr/>
-            {% include footer.html %}
-            {% include analytics.html %}
-          </div>
-        </div>
+      <div class="content">
+        <span class="tag-line">
+          {{ page.date | date_to_string }}
+        </span>
+        <h2 class="post-title">
+          {{ page.title }}
+        </h2>
+        {{ content }}
+        <small class="small-tag-line">- Tagged in {{ page.tags | array_to_sentence_string }}.</small>
+        <hr/>
+        {% include socialite.html %}
       </div>
     </div>
+    {% include footer.html %}
+    {% include analytics.html %}
   </body>
 </html>
