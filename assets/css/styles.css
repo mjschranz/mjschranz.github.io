@@ -103,3 +103,7 @@ div.image-list > div, .image {
   margin: 1%;
   width: 100%;
 }
+
+p {
+  margin: 0 0 20px;
+}
